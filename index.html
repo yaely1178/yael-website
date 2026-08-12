@@ -121,16 +121,37 @@
         padding: 1rem;
       }
     }
- </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D14SS0JMKC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  </style>
 
-  gtag('config', 'G-D14SS0JMKC');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D14SS0JMKC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-D14SS0JMKC');
+    gtag('config', 'AW-17435686680');
+  </script>
+
+  <!-- Google Ads conversion for WhatsApp click -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17435686680/dq2-CM6a1eAcEJju_flA',
+        'event_callback': callback
+      });
+
+      return false;
+    }
+  </script>
+
 </head>
 
 <body>
@@ -138,7 +159,7 @@
 <a href="https://wa.me/972542332575?text=שלום%20יעל,%20הגעתי%20דרך%20האתר%20ואשמח%20לקבל%20פרטים."
    target="_blank"
    class="whatsapp-button"
-  onclick="gtag('event', 'whatsapp_click', {transport_type: 'beacon'});">
+   onclick="gtag('event', 'whatsapp_click', {transport_type: 'beacon'}); gtag_report_conversion(this.href); return false;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     <span>שלחי לי הודעה</span>
 </a>

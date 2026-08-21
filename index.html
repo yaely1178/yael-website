@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="sQtQ0XeaTGJBd_BRzQgtTR_kZ-Vnml0-qVhf9QgL-qs" />
-
   <title>יעל ברקנבאום - טיפול רגשי והדרכת הורים</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Assistant', sans-serif;
       background-color: #f0f8f6;
@@ -23,185 +18,146 @@
       padding: 0;
       line-height: 1.8;
     }
-
     header {
       background: linear-gradient(to right, #a8edea, #fed6e3);
       color: #2c3e50;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem 2rem;
       text-align: center;
     }
-
+    header img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin-bottom: 1rem;
+    }
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.2em;
+      font-weight: 700;
     }
-
     header h2 {
-      margin-top: .5rem;
-      font-weight: 300;
+      margin: 0.5rem 0 0;
       font-size: 1.2em;
+      font-weight: 400;
+      color: #4a5568;
     }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, .07);
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
     }
-
-    .contact {
-      background: #e3f2fd;
-      padding: 1rem;
-      border-radius: 10px;
-      margin-top: 2rem;
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
     }
-
-    a {
-      color: #00796b;
+    h3 {
+      color: #2c3e50;
+      border-bottom: 2px solid #a8edea;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+      font-size: 1.4em;
+    }
+    ul {
+      padding-right: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    .contact-info p {
+      margin: 0.5rem 0;
+      font-size: 1.1em;
+    }
+    .contact-info a {
+      color: #2c3e50;
       text-decoration: none;
+      font-weight: bold;
     }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .whatsapp-button {
+    /* כפתור וואטסאפ צף */
+    .floating-whatsapp {
       position: fixed;
       bottom: 20px;
       left: 20px;
-      background: #25D366;
+      background-color: #25D366;
       color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
       text-decoration: none;
-      padding: 12px 18px;
-      border-radius: 40px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 1000;
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      font-weight: bold;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
-      z-index: 9999;
-      transition: .3s;
-      animation: float 2s ease-in-out infinite;
+      gap: 8px;
+      transition: transform 0.2s ease-in-out;
     }
-
-    .whatsapp-button:hover {
-      transform: scale(1.06);
-    }
-
-    .whatsapp-button img {
-      width: 28px;
-      height: 28px;
-    }
-
-    @keyframes float {
-      0%,100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-4px);
-      }
-    }
-
-    @media (max-width:600px) {
-      header h1 {
-        font-size: 1.5em;
-      }
-
-      header h2 {
-        font-size: 1em;
-      }
-
-      main {
-        margin: 1rem;
-        padding: 1rem;
-      }
+    .floating-whatsapp:hover {
+      transform: scale(1.05);
+      color: white;
     }
   </style>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D14SS0JMKC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-D14SS0JMKC');
-    gtag('config', 'AW-17435686680');
-  </script>
-
-  <!-- Google Ads conversion for WhatsApp click -->
-  <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17435686680/dq2-CM6a1eAcEJju_flA',
-        'event_callback': callback
-      });
-
-      return false;
-    }
-  </script>
-
 </head>
-
 <body>
 
-<a href="https://wa.me/972542332575?text=שלום%20יעל,%20הגעתי%20דרך%20האתר%20ואשמח%20לקבל%20פרטים."
-   target="_blank"
-   class="whatsapp-button"
-   onclick="gtag('event', 'whatsapp_click', {transport_type: 'beacon'}); gtag_report_conversion(this.href); return false;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    <span>שלחי לי הודעה</span>
-</a>
+  <header>
+    <img src="Screenshot_20250928-164735_Chrome.jpg" alt="יעל ברקנבאום">
+    <h1>יעל ברקנבאום</h1>
+    <h2>טיפול רגשי לילדים ונוער | הדרכת הורים</h2>
+  </header>
 
-<header>
+  <div class="container">
+    
+    <section class="card">
+      <p style="font-size: 1.15em; font-weight: 600; color: #2c3e50; text-align: center; margin-top: 0;">
+        מרחב מקבל, בטוח ומאפשר עבור ילדים, מתבגרים והוריהם. מקום שבו אפשר לעצור, להבין ולמצוא יחד דרכים מיטיבות לצמיחה ולשינוי.
+      </p>
+    </section>
 
-<img src="Screenshot_20250928-164735_Chrome.jpg"
-     alt="יעל ברקנבאום"
-     style="width:180px;height:180px;object-fit:cover;border-radius:50%;box-shadow:0 0 10px rgba(0,0,0,.15);margin-bottom:15px;">
+    <section class="card">
+      <h3>על הטיפול</h3>
+      <p>טיפול רגשי יוצר מקום לעצור ולהתבונן יחד על הקשיים – דרך שיח, משחק, יצירה ותנועה. כהורים, טבעי שנפגוש בתקופות שונות מורכבויות, דאגות ושאלות, וזה המקום לחשוב, להבין ולמצוא יחד את הדרך המיטיבה עבורכם.</p>
+      <p>הטיפול בקליניקה מציע לילדים ולמתבגרים מקום בטוח ונטול שיפוטיות לבטא את עולמם הפנימי, לפתח תחושת מסוגלות ולגבש את זהותם – ולכם ההורים, שותפות מותאמת, הבנה מעמיקה וכלים מעשיים שילוו אתכם ביומיום.</p>
+      
+      <p><strong>הקליניקה מציעה מענה מותאם אישית למגוון התמודדויות:</strong></p>
+      <ul>
+        <li><strong>ויסות רגשי:</strong> מתן כלים להתמודדות עם מצבים של חוסר ויסות, התקפי זעם, שינויים במצבי הרוח וקשיי הסתגלות – מתוך הקשבה וכבוד לעולמו הפנימי של הילד.</li>
+        <li><strong>טיפול בחרדות:</strong> הפחתת תסמיני חרדה, חששות והימנעויות באמצעות זיהוי מחשבות שליליות וחשיפה הדרגתית, בגישה המבוססת על טיפול קוגניטיבי-התנהגותי (CBT).</li>
+        <li><strong>דימוי עצמי וכישורים חברתיים:</strong> תיקוף עצמי, חיזוק תחושת המסוגלות והביטחון העצמי, ומתן כלים מעשיים לניהול רגשות ויוזמה בסיטואציות חברתיות.</li>
+        <li><strong>טיפול דיאדי (הורה-ילד):</strong> טיפול רגשי משותף לחיזוק הקשר והחיבור המשפחתי, ומתן מענה לקשיים דרך אינטראקציה מונחית ומשחק משותף.</li>
+        <li><strong>הדרכת הורים:</strong> מתן כלים, הכוונה וליווי רגשי להורים (כחלק מהטיפול בילד או בליווי נפרד).</li>
+      </ul>
+    </section>
 
-<h1>יעל ברקנבאום</h1>
-<h2>טיפול רגשי והדרכת הורים</h2>
+    <section class="card">
+      <h3>הגישה וההכשרה שלי</h3>
+      <p>מביאה איתי ניסיון עשיר בטיפול רגשי לילדים ונוער, טיפולים דיאדיים והדרכת הורים. נקודת המוצא שלי היא שאין פתרון אחד שמתאים לכולם – כל תהליך נבנה יחד, מתוך רגישות לצרכים ולקצב של הילד והתאמה אישית למבנה המשפחה.</p>
+      <ul>
+        <li>מטפלת באמצעות תנועה (M.A, אוניברסיטת חיפה)</li>
+        <li>מדריכת הורים מוסמכת (מרכז הורות ומשפחה, סמינר הקיבוצים)</li>
+        <li>שילוב כלים מעולם ה-CBT – מתמחה בלימודי CBT, אוניברסיטת חיפה</li>
+      </ul>
+    </section>
 
-</header>
+    <section class="card contact-info">
+      <h3>דרכי יצירת קשר</h3>
+      <p>מוזמנים לפנות לשיחת היכרות ראשונית, בה נקשיב לצורך ונבדוק כיצד אוכל ללוות אתכם.</p>
+      <p>📞 טלפון: <a href="tel:0542332575">054-2332575</a></p>
+      <p>📧 דוא"ל: <a href="mailto:yaely1178@gmail.com">yaely1178@gmail.com</a></p>
+      <p>📍 כתובת הקליניקה: כיכר המושבה, הוד השרון</p>
+    </section>
 
-<main>
+  </div>
 
-<p>ברוכים הבאים למרחב בטוח, מקבל ומכיל עבור ילדים והוריהם. כאן נוכל יחד להבין, להרגיש, להתחזק, ליצור שינוי ולצמוח.</p>
-
-<p>
-שמי יעל ואני מטפלת רגשית ומדריכת הורים. בעלת ניסיון רב בטיפול פרטני בילדים ונוער, טיפולים דיאדיים ומשפחתיים.
-בטיפול אני משתמשת בכלים טיפוליים שונים שרכשתי במהלך השנים, על מנת להגיע לכל אחד ואחת לפי צרכיו/ה האישיים.
-הטיפול נותן מענה למגוון סוגיות רגשיות, התנהגותיות וחברתיות.
-</p>
-
-<p>
-ההכשרה שלי: מטפלת באמצעות תנועה (MA אוניברסיטת חיפה), מדריכת הורים (מוסמכת מרכז הורות ומשפחה, סמינר הקיבוצים),
-משלבת כלים מעולם ה-CBT טיפול התנהגותי קוגניטיבי.
-</p>
-
-<div class="contact">
-<h3>דרכי יצירת קשר:</h3>
-
-<p>📞 <a href="tel:972542332575">054-2332575</a></p>
-
-<p>📧 <a href="mailto:yaely1178@gmail.com">yaely1178@gmail.com</a></p>
-
-<p>📍 הקליניקה ממוקמת בכיכר המושבה, הוד השרון</p>
-
-</div>
-
-</main>
+  <!-- כפתור וואטסאפ צף שמלווה את הגולש -->
+  <a class="floating-whatsapp" href="https://wa.me/972542332575?text=%D7%94%D7%99%20%D7%99%D7%A2%D7%9C%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank">
+    💬 שלחי לי הודעה בוואטסאפ
+  </a>
 
 </body>
 </html>

@@ -15,6 +15,24 @@
     gtag('config', 'AW-17435686680');
   </script>
 
+  <!-- Event snippet for קליק לשיחה conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17435686680/ffWnCNOwjOccEJju_flA',
+        'value': 1.0,
+        'currency': 'ILS',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <title>יעל ברקנבאום - טיפול ריגשי והדרכת הורים</title>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -164,7 +182,7 @@
     <section class="card contact-info">
       <h3>דרכי יצירת קשר</h3>
       <p>מוזמנים לפנות לשיחת היכרות ראשונית, בה נקשיב לצורך ונבדוק כיצד אוכל ללוות אתכם.</p>
-      <p>📞 טלפון: <a id="phone-link" href="tel:0542332575">054-2332575</a></p>
+      <p>📞 טלפון: <a id="phone-link" onclick="return gtag_report_conversion('tel:0542332575');" href="tel:0542332575">054-2332575</a></p>
       <p>📧 דוא"ל: <a href="mailto:yaely1178@gmail.com">yaely1178@gmail.com</a></p>
       <p>📍 כתובת הקליניקה: כיכר המושבה, הוד השרון</p>
     </section>
